@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entitiesFragment">
+
+    <fragment
+        android:id="@+id/entitiesFragment"
+        android:name="ni.edu.uca.evaluacionroom.ui.view.EntitiesFragment"
+        android:label="fragment_entities"
+        tools:layout="@layout/fragment_entities" >
+        <action
+            android:id="@+id/action_entitiesFragment_to_addEntityFragment"
+            app:destination="@id/addEntityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEntityFragment"
+        android:name="ni.edu.uca.evaluacionroom.ui.view.AddEntityFragment"
+        android:label="fragment_add_entity"
+        tools:layout="@layout/fragment_add_entity" >
+        <action
+            android:id="@+id/action_addEntityFragment_to_entitiesFragment"
+            app:destination="@id/entitiesFragment" />
+    </fragment>
+</navigation>
